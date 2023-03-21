@@ -1,2 +1,7 @@
-package farmacy.exception;public class MyException {
+package farmacy.exception;
+
+public class MyException extends Exception{
+    public MyException(String message) {
+        super(message);
+    }
 }
