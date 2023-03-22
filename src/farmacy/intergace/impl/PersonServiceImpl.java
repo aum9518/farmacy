@@ -5,6 +5,7 @@ import farmacy.Class.Pharmacy;
 import farmacy.exception.MyException;
 import farmacy.intergace.PersonService;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,8 +16,8 @@ public class PersonServiceImpl implements PersonService {
     public Person addPersonToPharmacy(List<Pharmacy> pharmacies) {
         System.out.println("Enter group id: ");
         int id = new Scanner(System.in).nextInt();
-        for (Pharmacy a:pharmacies) {
-            if (a.getId()==id){
+        for (Pharmacy a : pharmacies) {
+            if (a.getId() == id) {
                 Person person = new Person();
                 System.out.println("Enter first name: ");
                 String name = new Scanner(System.in).nextLine();
@@ -24,21 +25,21 @@ public class PersonServiceImpl implements PersonService {
                 String lastName = new Scanner(System.in).nextLine();
                 System.out.println("Enter email: ");
                 String email = new Scanner(System.in).nextLine();
-                 try {
-                    if (email.contains("@")){
+                try {
+                    if (email.contains("@")) {
 
-                       if (!a.getPeople().isEmpty()){
-                           for (Person b:a.getPeople()) {
-                               if (b.getEmail().equals(email)){
-                                   throw new MyException("Same email address!");
-                               }else {
-                                   person.setEmail(email);
-                               }
-                           }
-                       }else {
-                           person.setEmail(email);
-                       }
-                    }else {
+                        if (!a.getPeople().isEmpty()) {
+                            for (Person b : a.getPeople()) {
+                                if (b.getEmail().equals(email)) {
+                                    throw new MyException("Same email address!");
+                                } else {
+                                    person.setEmail(email);
+                                }
+                            }
+                        } else {
+                            person.setEmail(email);
+                        }
+                    } else {
                         throw new MyException("Email should contain '@'!");
                     }
 
@@ -48,32 +49,32 @@ public class PersonServiceImpl implements PersonService {
                 //person.setEmail(email);
                 person.setFirstName(name);
                 person.setLastName(lastName);
-                person.setId(a.getPeople().size()+1);
+                person.setId(a.getPeople().size() + 1);
                 a.getPeople().add(person);
                 return person;
             }
 
 
-    }
+        }
         return null;
     }
 
     @Override
     public Person findPersonById(List<Pharmacy> pharmacies) {
-        boolean isTrue=true;
-        List<Pharmacy>list = new ArrayList<>();
-                for (Pharmacy a:pharmacies) {
-                    System.out.println("Enter group id:");
-                    int groupId = new Scanner(System.in).nextInt();
-                    if (a.getId()==groupId) {
-                       list.add(a);
-                    }else {
-                        System.out.println("Not found group");
-                    }
-                }
+        boolean isTrue = true;
+        List<Pharmacy> list = new ArrayList<>();
+        for (Pharmacy a : pharmacies) {
+            System.out.println("Enter group id:");
+            int groupId = new Scanner(System.in).nextInt();
+            if (a.getId() == groupId) {
+                list.add(a);
+            } else {
+                System.out.println("Not found group");
+            }
+        }
         System.out.println("Enter person's id: ");
         int id = new Scanner(System.in).nextInt();
-        for (Pharmacy c:list) {
+        for (Pharmacy c : list) {
             for (Person p : c.getPeople()) {
                 if (p.getId() == id) {
                     isTrue = true;
@@ -85,8 +86,8 @@ public class PersonServiceImpl implements PersonService {
         }
 
 
-        try{
-            if (!isTrue){
+        try {
+            if (!isTrue) {
                 throw new MyException("Not found staff with id: ");
             }
         } catch (MyException e) {
@@ -97,7 +98,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public List<Person> getAllPharmacyStaff(List<Pharmacy> pharmacies) {
-        List<Pharmacy>list=new ArrayList<>();
+        List<Pharmacy> list = new ArrayList<>();
         boolean isTrue = true;
         try {
             System.out.println("Enter groups id:");
@@ -105,12 +106,12 @@ public class PersonServiceImpl implements PersonService {
             for (Pharmacy a : pharmacies) {
                 if (a.getId() == idGroup) {
                     isTrue = true;
-                   return a.getPeople();
+                    return a.getPeople();
                 } else {
                     isTrue = false;
                 }
             }
-            if (!isTrue){
+            if (!isTrue) {
                 throw new MyException("Not found group");
             }
 
@@ -122,6 +123,43 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public Person updatePersonFromPharmacy(List<Pharmacy> pharmacies) {
+        boolean isTrue = true;
+        boolean isTrue1 = true;
+        System.out.println("Enter group id: ");
+        int groupId = new Scanner(System.in).nextInt();
+        for (Pharmacy a : pharmacies) {
+            if (a.getId() == groupId) {
+                isTrue = true;
+                for (Person b : a.getPeople()) {
+                    System.out.println("Enter staff id: ");
+                    int staffId = new Scanner(System.in).nextInt();
+                    if (b.getId() == staffId) {
+                        isTrue1 = true;
+                        System.out.println("Enter new name:");
+                        String name = new Scanner(System.in).nextLine();
+                        b.setFirstName(name);
+                        System.out.println("Enter last name: ");
+                        String lastName = new Scanner(System.in).nextLine();
+                        b.setLastName(lastName);
+                        return b;
+                    } else {
+                        isTrue = false;
+                    }
+                }
+            } else {
+                isTrue = false;
+            }
+        }
+        try {
+            if (!isTrue) {
+                throw new MyException("Nut found group");
+            }
+            if (!isTrue1){
+                throw new MyException("Not found staff");
+            }
+        } catch (MyException e) {
+            System.out.println(e.getMessage());
+        }
         return null;
     }
 }
