@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95916596-d51b-45d2-8b08-078bf022faf0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmacy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/Class/Madicine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/Class/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/Class/Pharmacy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/exception/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/intergace/MedicineService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/intergace/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/intergace/PharmacyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/intergace/impl/MadiceineServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/intergace/impl/PersonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/farmacy/intergace/impl/PharmacyServiceImpl.java" afterDir="false" />
+    <list default="true" id="95916596-d51b-45d2-8b08-078bf022faf0" name="Changes" comment="add pharmacy method and person's 2 method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/farmacy/intergace/impl/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/farmacy/intergace/impl/PersonServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +67,18 @@
       <option name="presentableId" value="Default" />
       <updated>1679116659674</updated>
     </task>
+    <task id="LOCAL-00001" summary="add pharmacy method and person's 2 method">
+      <created>1679420919321</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679420919321</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add pharmacy method and person's 2 method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pharmacy method and person's 2 method" />
   </component>
 </project>

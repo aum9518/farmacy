@@ -97,6 +97,26 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public List<Person> getAllPharmacyStaff(List<Pharmacy> pharmacies) {
+        List<Pharmacy>list=new ArrayList<>();
+        boolean isTrue = true;
+        try {
+            System.out.println("Enter groups id:");
+            int idGroup = new Scanner(System.in).nextInt();
+            for (Pharmacy a : pharmacies) {
+                if (a.getId() == idGroup) {
+                    isTrue = true;
+                   return a.getPeople();
+                } else {
+                    isTrue = false;
+                }
+            }
+            if (!isTrue){
+                throw new MyException("Not found group");
+            }
+
+        } catch (MyException e) {
+            System.out.println(e.getMessage());
+        }
         return null;
     }
 
