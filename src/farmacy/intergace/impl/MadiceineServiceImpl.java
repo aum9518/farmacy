@@ -82,6 +82,24 @@ public class MadiceineServiceImpl implements MedicineService {
 
     @Override
     public List<Madicine> getAllMedicine(List<Pharmacy> pharmacies) {
+        boolean isTrue = true;
+        System.out.print("Enter pharmacy id: ");
+        int pharmacyId = new Scanner(System.in).nextInt();
+        for (Pharmacy a :pharmacies) {
+            if (a.getId()==pharmacyId){
+                isTrue=true;
+                return a.getMadicines();
+            }else {
+                isTrue=false;
+            }
+        }
+        try{
+            if (!isTrue){
+                throw new MyException("Not found pharmacy");
+            }
+        } catch (MyException e) {
+            System.out.println(e.getMessage());
+        }
         return null;
     }
 

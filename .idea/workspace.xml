@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95916596-d51b-45d2-8b08-078bf022faf0" name="Changes" comment="add addMedicineToPharmacy">
-      <change beforePath="$PROJECT_DIR$/src/farmacy/intergace/impl/MadiceineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/farmacy/intergace/impl/MadiceineServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="95916596-d51b-45d2-8b08-078bf022faf0" name="Changes" comment="add findMedicineByName" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679461217418</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add findMedicineByName">
+      <created>1679461913209</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679461913209</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -102,6 +107,7 @@
     <MESSAGE value="add gettAllFarmacyStaff" />
     <MESSAGE value="add updateStaffFromPharmacy" />
     <MESSAGE value="add addMedicineToPharmacy" />
-    <option name="LAST_COMMIT_MESSAGE" value="add addMedicineToPharmacy" />
+    <MESSAGE value="add findMedicineByName" />
+    <option name="LAST_COMMIT_MESSAGE" value="add findMedicineByName" />
   </component>
 </project>
