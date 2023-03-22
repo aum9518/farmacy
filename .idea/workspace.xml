@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95916596-d51b-45d2-8b08-078bf022faf0" name="Changes" comment="add findMedicineByName" />
+    <list default="true" id="95916596-d51b-45d2-8b08-078bf022faf0" name="Changes" comment="add getAllMedicine">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/farmacy/intergace/impl/MadiceineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/farmacy/intergace/impl/MadiceineServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679461913209</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add getAllMedicine">
+      <created>1679462368973</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679462368973</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -108,6 +118,17 @@
     <MESSAGE value="add updateStaffFromPharmacy" />
     <MESSAGE value="add addMedicineToPharmacy" />
     <MESSAGE value="add findMedicineByName" />
-    <option name="LAST_COMMIT_MESSAGE" value="add findMedicineByName" />
+    <MESSAGE value="add getAllMedicine" />
+    <option name="LAST_COMMIT_MESSAGE" value="add getAllMedicine" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
