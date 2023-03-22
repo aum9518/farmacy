@@ -5,6 +5,7 @@ public class Madicine {
     private String name;
     private int price;
 
+
     public int getId() {
         return id;
     }
